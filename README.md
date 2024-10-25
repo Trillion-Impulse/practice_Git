@@ -1,11 +1,12 @@
 브랜치를 사용하는 방법
 
-로컬 브랜치 목록 확인
-    현재 체크아웃 중인 브랜치 *로 표시
-git branch
+브랜치 목록 확인
+    로컬 브랜치 목록 확인
+        현재 체크아웃 중인 브랜치 *로 표시
+    git branch
 
-원격 브랜치 목록 확인
-git branch -r
+    원격 브랜치 목록 확인
+    git branch -r
 
 로컬에서 브랜치 생성
 git branch 브랜치이름
@@ -24,3 +25,11 @@ git checkout -b 브랜치이름
 
 원격 저장소에 브랜치 푸시
 git push -u origin 브랜치이름
+
+원격 저장소의 변경 사항 가져오기
+    로컬과 병합하지 않아 자동반영되지 않음
+git fetch
+git fetch 특정 원격 저장소 이름
+git fetch --prune 원격 저장소에서 삭제된 브랜치를 로컬에서도 제거
+
+next -> merge에 대하여
