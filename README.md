@@ -20,3 +20,22 @@
     ex) git clone https://github.com/{본인_아이디}/{저장소 아이디}.git
     ```
 
+## how to switch to another repository
+1. 현재 연결된 원격 repository 확인
+
+    ```
+    git remote -v
+    ```
+
+1. 현재 연결된 repository와의 연결 제거
+
+    ```
+    git remote remove origin
+    ```
+
+1. 새로운 원격 리포지토리 추가
+
+    ```
+    git remote add origin 새로운 원격 리포지토리 URL
+    ```
+
