@@ -4,7 +4,8 @@
 ### 로컬 브랜치 목록 확인
 현재 체크아웃 중인 브랜치 *로 표시
 
-```git branch
+```
+git branch
 ```
 
 ### 원격 브랜치 목록 확인
@@ -23,42 +24,50 @@ git branch 브랜치이름
 
 강제로 삭제하려면 -D 사용
 
-```git branch -d 브랜치이름
+```
+git branch -d 브랜치이름
 ```
 
 ### 로컬에서 지정한 브랜치로 전환
 전환시 현재 작업중인 변경사항이 커밋 되지 않았다면 경고
 
-```git checkout 브랜치이름
+```
+git checkout 브랜치이름
 ```
 
 ### 로컬에서 브랜치 생성후 생성한 브랜치로 전환
-```git checkout -b 브랜치이름
+```
+git checkout -b 브랜치이름
 ```
 
 ### 로컬에서 원격의 특정 브랜치를 가져와 체크아웃
-```git checkout -b 로컬브랜치이름 origin/원격브랜치이름
+```
+git checkout -b 로컬브랜치이름 origin/원격브랜치이름
 ```
 
 ## 원격
 ### 원격 저장소에 브랜치 푸시
-```git push -u origin 브랜치이름
+```
+git push -u origin 브랜치이름
 ```
 
 ### 원격 저장소의 모든 변경 사항 가져오기
 로컬과 병합하지 않아 자동반영되지 않음
 
-```git fetch
+```
+git fetch
 ```
 
 ### 특정 원격 저장소의 변경 사항 가져오기
-```git fetch 특정 원격 저장소 이름
+```
+git fetch 특정 원격 저장소 이름
 ```
 
 ### 특정 원격 브랜치의 변경 사항 가져오기
 origin에서 feature-branch 브랜치의 변경 사항만 가져옴
 
-```git fetch origin feature-branch
+```
+git fetch origin feature-branch
 ```
 
 ### 원격 저장소에서 삭제된 브랜치를 로컬에서도 제거
@@ -66,13 +75,15 @@ origin에서 feature-branch 브랜치의 변경 사항만 가져옴
 
 원격 저장소에서 삭제된 브랜치에 대한 로컬 추적 브랜치를 제거
 
-```git fetch --prune
+```
+git fetch --prune
 ```
 
 ### 특정 원격 저장소에서 삭제된 브랜치를 로컬에서도 제거
 origin은 특정 원격 저장소의 이름
 
-```git fetch origin --prune
+```
+git fetch origin --prune
 ```
 
 ## merge
@@ -111,7 +122,8 @@ origin은 특정 원격 저장소의 이름
 ### 기본 merge
 현재 체크아웃된 브랜치에 다른 브랜치를 병합
 
-```git merge 통합하려는 브랜치 이름
+```
+git merge 통합하려는 브랜치 이름
 ```
 
 ### 상태 점검
@@ -121,5 +133,6 @@ origin은 특정 원격 저장소의 이름
 
 merge 충돌 발생 시 어떤 파일을 merge할 수 없었는지 점검
 
-```git status
+```
+git status
 ```
