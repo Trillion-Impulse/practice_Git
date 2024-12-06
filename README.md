@@ -160,3 +160,64 @@ merge 충돌 발생 시 어떤 파일을 merge할 수 없었는지 점검
 git status
 ```
 
+### rebase
+브랜치를 재구성하거나 커밋을 다시 적용하는 데 사용
+
+브랜치의 베이스를 다른 브랜치 위로 변경하여 커밋들을 새로 적용
+
+병합 기록 없이 깔끔한 커밋 히스토리를 유지
+
+A 브랜치에서 작업 중 B 브랜치의 최신 변경 사항을 가져와 A 브랜치에 반영하고자 할 때
+
+(A 브랜치의 커밋들이 B 브랜치의 최신 커밋 뒤에 붙음)
+
+```
+git checkout A_branch
+git rebase B_branch
+```
+
+### interactive rebase
+커밋을 더 세밀하게 조작할 수 있도록 해줌
+
+현재 가리키고 있는 HEAD부터 최근 n개의 커밋을 대상으로 interactive rebase 함
+
+```
+git rebase -i HEAD~n
+```
+
+pick 커밋을 그대로 사용
+reword 커밋 메세지를 변경
+edit 커밋을 수정
+squash 이전 커밋과 합침
+fixup 커밋을 합치되 메시지는 유지하지 않음
+drop 커밋 삭제
+
+### rebase 과정 중 충돌 해결
+git rebase 중 충돌이 발생하면 Git은 충돌이 발생한 커밋까지 중지하고 충돌을 해결할 수 있도록 함
+
+충돌을 해야한 후에는 다음 명령어로 rebase를 계속 진행할 수 있음
+
+```
+git add <해결된 파일>
+git rebase --continue
+```
+
+### rebase 중지
+현재 진행 중인 rebase를 취소하고 원래 상태로 돌아감
+
+```
+git rebase --abort
+```
+
+### rebase 주의사항
+- 공개된 커밋은 리베이스 하지 않기
+    - 이미 다른 사람과 공유된 커밋을 리베이스하면 커밋 해시가 변경되어 충돌 발생 가능
+- git rebase 사용 후 강제 푸시
+    - git rebase로 커밋이 재구성되면 git push --force가 필요할 수 있음
+
+### merge와 rebase의 차이점
+- merge는 두 브랜치를 병합하여 새로운 커밋을 생성
+    - 커밋 히스토리가 병합 기록을 포함하므로 기록이 복잡해질 수 있음
+
+- rebase는 브랜치를 다른 브랜치 위로 재구성하여 커밋 기록을 깔끔하게 유지
+    - 재구성 중 커밋 해시가 변경되므로 원격 저장소에 이미 푸시한 커밋을 리베이스하면 git push --force가 필요
