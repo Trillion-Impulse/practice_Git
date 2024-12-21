@@ -181,3 +181,18 @@ ___
 ```
 
 # HTML을 사용하여 더 다양하게 표현 가능
+
+# 이모지를 사용하는 방법
+1. 이모지 사이트
+    1. Shortcodes를 사용
+    1. Codepoints를 사용
+
+    :flying_saucer: https://emojipedia.org/ :flying_saucer:
+
+1. OS에서 제공하는 이모지 입력 기능
+    1. Windows
+        - windows + . 또는 windows + ;
+    1. MacOS
+        - ctrl + Command + Space
+    1. Linux
+        - ctrl + shift + e
