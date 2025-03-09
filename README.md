@@ -223,9 +223,13 @@ git rebase --abort
 - git rebase 사용 후 강제 푸시
     - git rebase로 커밋이 재구성되면 git push --force가 필요할 수 있음
 
-### merge와 rebase의 차이점
+***
+
+## merge와 rebase의 차이점
 - merge는 두 브랜치를 병합하여 새로운 커밋을 생성
     - 커밋 히스토리가 병합 기록을 포함하므로 기록이 복잡해질 수 있음
 
 - rebase는 브랜치를 다른 브랜치 위로 재구성하여 커밋 기록을 깔끔하게 유지
     - 재구성 중 커밋 해시가 변경되므로 원격 저장소에 이미 푸시한 커밋을 리베이스하면 git push --force가 필요
+
+***
